@@ -1,0 +1,474 @@
+
+.navbar{
+    background-color: rgb(55, 55, 55);
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.navbar a{
+    display: float;
+    float: left;
+    text-decoration: none;
+    color: aliceblue;
+    padding: 12px 12px;
+    margin: 1px;
+    border-radius: 10px;
+    display: block;
+    font-family: 'Times New Roman', Times, serif;
+
+}
+
+.navbar a:hover{
+    background-color: aliceblue;
+    color: black;
+}
+
+#Mainname{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 500%;
+    margin: 150px;
+    /* color: white; */
+    
+}
+
+/* #bgmainname{
+    background-color:black
+} */
+
+
+
+.gridcontainer{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 5px;
+    justify-content: center;
+    margin:  30px 130px;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 5s forwards;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#griditems {
+    background-color: #ddd;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+    margin-bottom: 30px;
+}
+
+#griditems img {
+    opacity: 0.9;
+    max-width: 100%;
+    height: auto;
+}
+
+#griditems:hover{
+    opacity: 1;
+    background-color:black;
+    zoom: 30%;
+}
+
+
+
+#products{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+
+
+
+.gridcontainer1{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 5px;
+    justify-content: center;
+    margin: 20px 130px;
+
+
+}
+
+
+
+#griditems1 {
+    background-color: #ddd;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+}
+
+#griditems1 img {
+    max-width: 100%;
+    height: auto;
+    opacity: 1;
+    z-index: -1;
+}
+
+#griditems1 img:hover{
+    opacity: 0.7;
+}
+
+.gridcontainer1 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 5px;
+    margin: 80px;
+}
+
+.griditem1 {
+    position: relative;
+}
+
+.image-wrapper {
+    position: relative;
+    background-color: #ddd;
+    cursor: pointer;
+    overflow: hidden; /* Ensure the image doesn't overflow */
+    transition: 0.3s;
+}
+
+.griditem1 img {
+    max-width: 100%;
+    height: auto;
+    transition: 0.3s;
+}
+
+.image-wrapper:hover img {
+    opacity: 0.3; /* Hide image on hover */
+    border-radius: 10px;
+
+}
+
+.image-text {
+    position: absolute;
+    top: 50%; /* Position at the vertical center */
+    left: 50%; /* Position at the horizontal center */
+    transform: translate(-50%, -50%); /* Center the text using translate */
+    color: rgb(0, 0, 0);
+    font-size: 30px;
+    font-display: bold;
+    text-align: center;
+    font-family:'Times New Roman', Times, serif;
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    opacity: 0; /* Initially hidden */
+    transition: 0.3s;
+    text-transform: uppercase;
+}
+
+.image-wrapper:hover .image-text {
+    opacity: 1; /* Display text on hover */
+}
+
+.productinfo{
+    margin-top:20px;
+    margin-bottom: 100px;
+    font-family:'Times New Roman', Times, serif;
+    font-size: larger;
+    text-align: center;
+    justify-content: center;
+}
+
+/* .searchbar input{
+    float: right;
+    background-color: aliceblue;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 20px;
+    margin: 8px;
+    border: 1px solid black;
+    border-radius: 20px;
+} */
+
+.table-container {
+    margin: 60px;
+}
+
+.custom-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.custom-table th, .custom-table td {
+    padding: 12px 15px;
+    text-align: left;
+}
+
+.custom-table th {
+    background-color: #2c3e50;
+    color: white;
+}
+
+.custom-table tr:nth-child(even) {
+    background-color: #ecf0f1;
+    color: black;
+}
+.custom-table tr {
+    color: black;
+}
+
+.custom-table tr:hover {
+    background-color: #d4e6f1;
+    transition: background-color 0.3s ease-in-out;
+   
+}
+
+/* Responsive styles */
+@media screen and (max-width: 600px) {
+    .custom-table {
+        border-radius: 0;
+        box-shadow: none;
+    }
+}
+
+
+
+.order-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25d366;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease-in-out;
+}
+
+.order-button:hover {
+    background-color: #128c7e;
+}
+
+.whatsapp-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+
+/* .designtest img{
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    height: 50%;
+    width: 30%;
+    margin-top: 60px;
+} */
+
+.designtest {
+    text-align: center;
+    padding: 80px 0;
+}
+
+.image-container {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+}
+
+
+.background-image {
+    max-width: 100%;
+    height: auto;
+}
+
+.user-image {
+
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    /* border: 1px solid black; */
+    max-width: 20%;
+    max-height: 20%
+}
+
+
+.button-container {
+    margin-top: 20px;
+}
+
+.custom-button {
+    padding: 10px 20px;
+    background-color: #e1306c;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.custom-button:hover {
+    background-color: #b71c5f;
+}
+
+
+
+
+.footer {
+    /* background-color: #333; */
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 20px;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.social-icons {
+    margin-top: 10px;
+}
+
+.social-icon {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.social-icon img {
+    width: 30px;
+    height: 30px;
+    transition: opacity 0.3s;
+}
+
+.social-icon img:hover {
+    opacity: 0.7;
+}
+
+
+/* Navbar styles for mobile devices */
+@media screen and (max-width: 768px) {
+    .navbar {
+        text-align: center;
+    }
+    
+    .navbar a {
+        display: inline-block;
+        float: none;
+        padding: 10px;
+        margin: 2px;
+    }
+}
+
+/* Main title styles for mobile devices */
+@media screen and (max-width: 768px) {
+    #Mainname {
+        font-size: 300%; /* Adjust the font size as needed */
+        margin: 50px 0;
+    }
+}
+
+/* Grid container styles for mobile devices */
+@media screen and (max-width: 768px) {
+    .gridcontainer, .gridcontainer1 {
+        grid-template-columns: repeat(2, 1fr); /* Adjust the number of columns as needed */
+        margin: 20px;
+    }
+}
+
+/* Images within Grid Items for mobile devices */
+#griditems img, #griditems1 img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Order Button styles for mobile devices */
+@media screen and (max-width: 768px) {
+    .order-button {
+        position: static;
+        margin: 20px auto;
+    }
+}
+
+/* Footer styles for mobile devices */
+@media screen and (max-width: 768px) {
+    .footer {
+        padding: 10px;
+    }
+    
+    .social-icons {
+        margin-top: 5px;
+    }
+    
+    .social-icon img {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+/* Rest of your existing CSS code... */
+.navbar {
+    background-color: rgb(55, 55, 55);
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.navbar a {
+    display: inline-block; /* Fix for floated elements */
+    text-decoration: none;
+    color: aliceblue;
+    padding: 12px;
+    margin: 1px;
+    border-radius: 10px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.navbar a:hover {
+    background-color: aliceblue;
+    color: black;
+}
+
+#Mainname {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 500%;
+    margin: 150px;
+}
+
+/* Other CSS rules... */
+/* Test Design section styles for mobile devices */
+@media screen and (max-width: 768px) {
+    .designtest {
+        padding: 40px 0;
+    }
+
+    .image-container {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .user-image {
+        max-width: 50%;
+        max-height: 50%;
+    }
+}
+
+
